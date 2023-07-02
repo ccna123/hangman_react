@@ -24,8 +24,6 @@ function head(context, mistakes) {
     context.arc(250, 130, 20, 0.1 * Math.PI, 0.9 * Math.PI);
     context.stroke();
   }
-
-
 }
 function body(context) {
   context.beginPath();
