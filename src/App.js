@@ -1,24 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Playground } from "./components/Playground";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App overflow-auto font-mono bg-gradient-to-r min-w-max min-h-max from-cyan-300 to-blue-300 w-full h-screen">
+        <Routes>
+          <Route path="/" element={<Playground />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
